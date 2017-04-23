@@ -1,0 +1,15 @@
+<div >
+  <h4 class="commTitle">User Page for {{uId}}</h4>
+  <div class="listBackground">
+    <div *ngIf="(loaded && !userStories)" class="">
+      <h4>No Stories for this User</h4>
+    </div>
+    <ol class="userList">
+      <li *ngFor="let u of userStories" class="userList">
+         {{u.created_at | date: 'MM/dd/yyyy'}} {{uId}} wrote:
+         <a href={{u.url}}>{{u.title}}</a> which has {{u.points}} karma and <a href="comments/{{u.objectID}}">
+           {{u.num_comments}} comments </a>
+      </li>
+   </ol>
+ </div>
+</div>

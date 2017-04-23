@@ -1,0 +1,13 @@
+  <div>
+   <div class="listBackground">
+     <h4>Top HackerNews Stories</h4>
+     <ol dense class="numList">
+       <li *ngFor="let s of stories" class="hnListItem">
+         <a href="{{s.url}}">{{s.title}} </a> <br />
+         <span>{{s.points}} points by <a href="/user/{{s.author}}">{{s.author}}</a> |
+            <a href="/comments/{{s.objectID}}">{{s.num_comments}} comments</a> </span>
+
+       </li>
+    </ol>
+   </div>
+ </div>

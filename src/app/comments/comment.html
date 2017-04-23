@@ -1,0 +1,16 @@
+  <div>
+    <div class="listBackground">
+      <h4 class="commTitle">Comments for: {{title}}</h4>
+      <ul dense class="numList">
+        <li *ngFor="let c of children" class="commList">
+         <span class="comtext">{{c.created_at | date: 'MM/dd/yyyy'}}</span> -   <a href="/user/{{c.author}}">{{c.author}} </a> said:
+          <div innerHTML = "{{ c.text }}" class="commHTML"></div>
+          <ul>
+            <li *ngFor="let sub of c.children" class="commList">
+                <a > {{sub.created_at | date: 'MM/dd/yyyy'}} - {{sub.author}} </a> said:
+                <div innerHTML = "{{ sub.text }}" class="commHTML"></div></li>
+          </ul>
+        </li>
+     </ul>
+    </div>
+  </div>
