@@ -73,6 +73,6 @@ app.get('/api/stories/:userId', function(req, res) {
 // * For each story. Get all their __comments__.
 // * For each story. Get their __user__.
 // * For each user. Get their top 5 __submitted stories based on karma__.
-app.listen(3000, function () {
+app.listen(process.env.PORT, function () {
   console.log('Example app listening on port 3000!')
 });
