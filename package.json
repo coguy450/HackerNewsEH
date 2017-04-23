@@ -5,6 +5,7 @@
   "main": "app.js",
   "scripts": {
     "api": "node app.js",
+    "start": "node app.js && ng serve --proxy-config proxy.conf.json",
     "serve": "ng serve --proxy-config proxy.conf.json",
     "build": "ng build",
     "test": "ng test",
