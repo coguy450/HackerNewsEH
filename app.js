@@ -1,16 +1,15 @@
 var express = require('express');
 var request = require('request-promise-native');
 var app = express();
-var fs = require('fs');
+var fs = require('fs-extra');
 
-
-fs.writeFile('proxy.conf.json',
-  {
-   "/api": {
-      "target": "http://localhost:" + process.env.PORT,
-      "secure": false
-   }
-  }, (err) => {
+var configJSON = {
+  "/api": {
+     "target": "http://localhost:" + (process.env.PORT || '3000'),
+     "secure": false
+  }
+};
+fs.writeJSON('proxy.conf.json', configJSON, (err) => {
   if (err) throw err;
   console.log('The file has been saved!');
 });
