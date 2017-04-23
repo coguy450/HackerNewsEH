@@ -12,6 +12,15 @@
     "lint": "ng lint",
     "e2e": "ng e2e"
   },
+  "scripts": {
+    "start": "http-server",
+    "lint": "tslint \"src/**/*.ts\"",
+    "test": "ng test",
+    "pree2e": "webdriver-manager update",
+    "e2e": "protractor",
+    "preinstall": "npm install -g http-server",
+    "postinstall": "ng build && mv dist/* ."
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/riltsken/apto-quiz.git"
@@ -41,9 +50,7 @@
     "request": "^2.81.0",
     "request-promise-native": "^1.0.3",
     "rxjs": "^5.1.0",
-    "zone.js": "0.8.5"
-  },
-  "devDependencies": {
+    "zone.js": "0.8.5",
     "@angular/cli": "1.0.0",
     "@angular/compiler-cli": "^4.0.0",
     "@types/jasmine": "2.5.38",
