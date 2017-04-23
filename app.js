@@ -1,6 +1,19 @@
 var express = require('express');
 var request = require('request-promise-native');
 var app = express();
+var fs = require('fs');
+
+
+fs.writeFile('proxy.conf.json',
+  {
+   "/api": {
+      "target": "http://localhost:" + process.env.PORT,
+      "secure": false
+   }
+  }, (err) => {
+  if (err) throw err;
+  console.log('The file has been saved!');
+});
 
 app.get('/api/stories', function (req, res) {
   // This will start out by getting the front page, then fill in with most recent stories until you reach 50
