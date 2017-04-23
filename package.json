@@ -4,12 +4,11 @@
   "description": "Apto Quiz",
   "main": "app.js",
   "scripts": {
-    "start": "ng serve --proxy-config proxy.conf.json",
+    "start": "node app.js && ng serve --proxy-config proxy.conf.json",
     "lint": "tslint \"src/**/*.ts\"",
     "test": "ng test",
     "pree2e": "webdriver-manager update",
     "e2e": "protractor",
-    "postinstall": "node app.js"
   },
   "repository": {
     "type": "git",
