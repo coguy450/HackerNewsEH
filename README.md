@@ -43,4 +43,10 @@ __Please share a short paragraph of what you thought about the exercise as well.
 
 ## notes from Eric
 Overall it was a fun exercise to build a new app in Angular2. I have done a fair amount of work with Angular2,
-but probably haven't scaffolded an app this much. The challenges were in setting up the front end router
+but probably haven't scaffolded an app this much. The challenges were in setting up the front end router and getting
+everything injected correctly. It is quite a bit different than Angular 1.x in those respects. I did have a problem accessing the HackerNews API from the link above, they were having firebase issues, I kept getting 500s, so I used a different API (https://hn.algolia.com/api).
+I tried to mirror the hackernews styling, and added some apto colors. The exercise took a little over 8 hours, overall it was good and fun, a few tricky things, but nothing out of the ordinary. It was a good learning experience and I plan on using this scaffolding as a quickstart for future angular2 projects.
+I did try to push this to heroku, but it still needs a fair amount of configuration for that, specifically configuring the proxies, since it is set up to send everything to localhost:3000, so I didn't get around to adding all that configuration.
+
+I look forward to hearing your feedback and questions, have a great day,
+Eric Hartmann
