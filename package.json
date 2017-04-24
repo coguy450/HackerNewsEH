@@ -5,10 +5,12 @@
   "main": "app.js",
   "scripts": {
     "start": "node app.js && ng serve --proxy-config proxy.conf.json",
+    "serve": "ng serve --proxy-config proxy.conf.json",
     "lint": "tslint \"src/**/*.ts\"",
     "test": "ng test",
     "pree2e": "webdriver-manager update",
-    "e2e": "protractor"
+    "e2e": "protractor",
+    "ech": "echo process.ENV"
   },
   "repository": {
     "type": "git",
