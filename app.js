@@ -3,16 +3,16 @@ var request = require('request-promise-native');
 var app = express();
 var fs = require('fs-extra');
 
-var configJSON = {
-  "/api": {
-     "target": "http://localhost:" + (process.env.PORT || '3000'),
-     "secure": false
-  }
-};
-fs.writeJSON('proxy.conf.json', configJSON, (err) => {
-  if (err) throw err;
-  console.log('The file has been saved!');
-});
+// var configJSON = {
+//   "/api": {
+//      "target": "http://localhost:" + (process.env.PORT || '3000'),
+//      "secure": false
+//   }
+// };
+// fs.writeJSON('proxy.conf.json', configJSON, (err) => {
+//   if (err) throw err;
+//   console.log('The file has been saved!');
+// });
 
 app.get('/api/stories', function (req, res) {
   // This will start out by getting the front page, then fill in with most recent stories until you reach 50
