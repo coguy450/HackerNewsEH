@@ -1,18 +1,6 @@
 var express = require('express');
 var request = require('request-promise-native');
 var app = express();
-var fs = require('fs-extra');
-
-// var configJSON = {
-//   "/api": {
-//      "target": "http://localhost:" + (process.env.PORT || '3000'),
-//      "secure": false
-//   }
-// };
-// fs.writeJSON('proxy.conf.json', configJSON, (err) => {
-//   if (err) throw err;
-//   console.log('The file has been saved!');
-// });
 
 app.get('/api/stories', function (req, res) {
   // This will start out by getting the front page, then fill in with most recent stories until you reach 50
@@ -85,6 +73,6 @@ app.get('/api/stories/:userId', function(req, res) {
 // * For each story. Get all their __comments__.
 // * For each story. Get their __user__.
 // * For each user. Get their top 5 __submitted stories based on karma__.
-app.listen(process.env.PORT, function () {
-  console.log('Example app listening on port 3000!')
+app.listen(3000, function () {
+  console.log('Example app listening on port 3000');
 });
